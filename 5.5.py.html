@@ -1,0 +1,37 @@
+import numpy as np
+
+def get_numbers():
+    numbers = []
+    print("Enter numbers one by one. Type 'done' to finish.")
+    while True:
+        user_input = input("Enter a number: ")
+        if user_input.lower() == 'done':
+            break
+        try:
+            number = float(user_input)
+            numbers.append(number)
+        except ValueError:
+            print("Please enter a valid number.")
+    return numbers
+
+def calculate_statistics(numbers):
+    mean = np.mean(numbers)
+    variance = np.var(numbers)
+    standard_deviation = np.std(numbers)
+    return mean, variance, standard_deviation
+
+def main():
+    numbers = get_numbers()
+    if len(numbers) == 0:
+        print("No numbers entered. Exiting.")
+        return
+    
+    mean, variance, standard_deviation = calculate_statistics(numbers)
+    
+    print(f"Numbers: {numbers}")
+    print(f"Mean: {mean}")
+    print(f"Variance: {variance}")
+    print(f"Standard Deviation: {standard_deviation}")
+
+if __name__ == "__main__":
+    main()

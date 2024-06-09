@@ -1,0 +1,15 @@
+def display_array(arr):
+    for i in arr:
+        print(i)
+
+def main():
+    array = []
+    num_elements = int(input("Enter the number of elements you want to add to the array: "))
+    for _ in range(num_elements):
+        element = input("Enter element: ")
+        array.append(element)
+    print("The elements of the array are:")
+    display_array(array)
+
+if __name__ == "__main__":
+    main()

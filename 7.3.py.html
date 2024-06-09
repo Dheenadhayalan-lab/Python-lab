@@ -1,0 +1,6 @@
+def remove_duplicates(string):
+    return ''.join(sorted(set(string), key=string.index))
+
+input_string = "hello"
+result = remove_duplicates(input_string)
+print("String after removing duplicates:", result)

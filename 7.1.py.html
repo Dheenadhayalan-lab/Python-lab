@@ -1,0 +1,12 @@
+def count_characters(string):
+    frequency = {}
+    for char in string:
+        if char in frequency:
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+    return frequency
+
+input_string = input("Enter a string: ")
+character_frequency = count_characters(input_string)
+print("Character frequency:", character_frequency)

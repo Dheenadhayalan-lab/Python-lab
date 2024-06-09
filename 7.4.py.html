@@ -1,0 +1,27 @@
+def string_length(string):
+    return len(string)
+
+def string_copy(string):
+    return string
+
+def string_concatenate(string1, string2):
+    return string1 + string2
+
+def string_to_uppercase(string):
+    return string.upper()
+
+def compare_strings(string1, string2):
+    if string1 < string2:
+        return f"{string1} comes before {string2} alphabetically."
+    elif string1 > string2:
+        return f"{string1} comes after {string2} alphabetically."
+    else:
+        return f"{string1} and {string2} are equal."
+
+str1 = "hello"
+str2 = "world"
+print("Length of string:", string_length(str1))
+print("Copy of string:", string_copy(str1))
+print("Concatenation of strings:", string_concatenate(str1, str2))
+print("Uppercase version of string:", string_to_uppercase(str1))
+print("Comparison of strings:", compare_strings(str1, str2))
